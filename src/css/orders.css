@@ -1,0 +1,107 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0); 
+  }
+
+
+.order_list {
+    position: absolute;
+    overflow-y: scroll;
+    left: 0;
+    top: 0;
+    width: 26%;
+    height: 100%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(12, 12, 12, 0.8)), url("../../images/fabric3.jpg");
+    background-size:cover;
+}
+
+.order_bar {
+    position: fixed;
+    width: 26%;
+    height: 9%;
+}
+.order_hover {
+    position: fixed;
+    top: 0;
+    width: 26%;
+    height: 0.6%;
+    background-color: darkred;
+}
+
+.order_section {
+    position: absolute;
+    width: 80%;
+    height: 34%;
+    top: 12%;
+    left: 10%;
+    right: 10%;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgb(181, 178, 160);
+    background: #ffffff11;
+    color:  rgb(218, 212, 195);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.6vw;
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5%;
+    letter-spacing: 0.1em;
+    line-height: 0.8vw;
+}
+.order_section span {
+    letter-spacing: 0.6em;
+}
+.order_quantity span {
+    letter-spacing: 0.1em;
+}
+.order_cancel {
+    font-size: 0.8vw;
+    margin-right: 5%;
+    padding-right: 5%;
+    padding-left: 15%;
+    text-align: right;
+    cursor: pointer;
+}
+.order_alert, .cancel_alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-color: darkred;
+    font-size: 0.7vw;
+    line-height: 1.2vw;
+    text-align: center;
+    padding: 10%;
+}
+
+.hide_order {
+    position: fixed;
+    bottom: 0;
+    width: 26%;
+    height: 5%;
+    font-size: 1vw;
+    padding: 1%;
+    text-align: center;
+    color:  rgb(218, 212, 195);
+    background-color: rgba(0, 0, 0, 0.489);
+}
+
+
+
+

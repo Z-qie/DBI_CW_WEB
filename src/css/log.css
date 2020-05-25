@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.log_bg {
+    position: absolute;
+    background-size: cover;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(210, 210, 210, 0.5)), url("../../images/fabric2.jpg");
+    width: 100%;
+    height: 100vh;
+}
+.log_page {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+/*-- home page button ----------------------------------------------------------------------------------------*/
+
+.home_button_bg{
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    left: -170px;
+    width: 200px;
+    height: 100px;  
+    border-right: 5px solid rgb(238, 236, 230);;
+    background-color: rgb(12, 12, 12);
+    cursor: pointer;
+}.staff_entry {
+    z-index: 1000;
+    position: absolute;
+    bottom: -180px;
+    left: 20px;
+    width: 100px;  
+    height: 200px;
+    border-right: 5px solid rgb(238, 236, 230);;
+    background-color: rgb(12, 12, 12);
+    border-top: 5px solid rgb(238, 236, 230);
+    border-right: 0;
+    cursor: pointer;
+}
+
+.home_text, .staff_text {
+    position: absolute;
+    padding-top: 68px;
+    border-top: 20px solid rgb(255, 253, 248);
+    padding-right: 40px;
+    border-right: 1.5px solid rgb(255, 253, 248);
+    padding-left: 10px;
+    top: -14px;
+    left: -30px;
+    font-family: Didot, serif;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    color: rgb(255, 253, 248);
+} .staff_text {
+    border-top: 1.5px solid rgb(255, 253, 248);
+    border-right: 20px solid rgb(255, 253, 248);
+    writing-mode: vertical-rl;
+    top: 23px;
+    left: 0;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 34px;
+
+}
+
+/*-- login section ----------------------------------------------------------------------------------------*/
+
+.login_box {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    width: 450px;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
+}
+
+.login_form {
+    position: absolute;
+    top: 60%;
+    right: 0%;
+    text-align: center;
+    font-size: small;
+}
+
+.login_bar {
+    position: absolute;
+    font-family: Didot, serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: rgb(231, 225, 210);
+    padding-top: 60px;
+    bottom: 18%;
+    right: 0;
+    width: 70px;
+    height: 130px;
+    background-color: rgb(12, 12, 12);
+    cursor: pointer;
+    writing-mode: vertical-rl;
+}
+
+.login_box h1 {
+    font-family: Didot, serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgb(230, 225, 214);
+    text-align: right;
+}
+
+.login_text {
+    display: block;
+    box-sizing: border-box;
+    width: 240px;
+    background: #ffffff30;
+    border: 1px solid rgb(231, 225, 210);
+    border-right: 0px;
+    padding: 10px 20px;
+    outline: none;
+    margin: 10px 0;
+    text-align: center;
+    color: rgb(231, 225, 210);
+}
+
+.login_button {
+    width: 240px;
+    background: #000;
+    border: 1px solid rgb(231, 225, 210);
+    color: rgb(231, 225, 210);
+    text-align: right;
+    cursor: pointer;
+}
+
+.login_confirm {
+    z-index: 300px;
+    position: absolute;
+    width: 240px;
+    height: 100px;
+    background: linear-gradient(0deg, rgb(81, 81, 81) 5%, rgb(181, 178, 160) 5%);
+    color: rgb(81, 81, 81);
+    text-align: right;
+    font-size: smaller;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+}
+
+
+/*-- register section ----------------------------------------------------------------------------------------*/
+.register_box {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    width: 450px;
+    height: 100vh;
+    background-color: rgba(241, 238, 229, 0.8);
+}
+
+.register_box h1 {
+    font-family: Didot, serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgb(128, 126, 113);
+    text-align: left;
+}
+
+.register_bar {
+    font-family: Didot, serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: rgb(12, 12, 12);
+    padding-top: 10px;
+    position: absolute;
+    top: 10%;
+    left: -4.5%;
+    width: 70px;
+    height: 130px;
+    background-color: rgb(231, 225, 210);
+    cursor: pointer;
+    writing-mode: vertical-lr;
+}
+
+.register_form {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    text-align: center;
+    font-size: small;
+}
+
+.lid {
+    position: absolute;
+    right: 100%;
+    width: 300px;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+}
+
+.lid span {
+    position: absolute;
+    left: -30px;
+    writing-mode: vertical-lr;
+    font-family: Didot, serif;
+    font-size: 5em;
+    letter-spacing: 1em;
+    line-height: 1.5em;
+    color: rgb(222, 220, 211);
+}
+.register_text {
+    display: block;
+    box-sizing: border-box;
+    width: 240px;
+    background: #ffffff30;
+    border: 1px solid rgb(181, 178, 160);
+    border-left: 0px;
+    padding: 10px 10px;
+    outline: none;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.custom-select{
+    display: block;
+    box-sizing: border-box;
+    width: 240px;
+    height: 41.5px;
+    background: #ffffff30 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+    border: 1px solid rgb(181, 178, 160);
+    border-left: 0px;
+    border-radius: 0;
+    outline: none;
+    margin: 10px 0;
+    color: rgb(128, 126, 113);
+    font-size: small;
+    text-align: left;
+    padding-left: 7px;
+}
+
+.custom-select:focus {
+    border-color: rgb(181, 178, 160);
+    outline: 0;
+    box-shadow: none;
+}
+
+.register_button {
+    width: 240px;
+    background: rgb(221, 219, 208);
+    border: 1px solid rgb(181, 178, 160);
+    color: rgb(12,12,12);
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.alerts {
+    position: absolute;
+    right: 100%;
+    top: 10%;
+    width: 200px;
+    height: 100px;
+}
+
+.alerts * {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(181, 178, 160) 5%, rgb(12,12,12) 0%);
+    border-top: 1px solid rgb(181, 178, 160);;
+    color: rgb(221, 219, 208);
+    text-align: right;
+    font-size: 0.7em;
+    padding: 10px 10px 10px 30px;
+    border-radius: 0;
+    top: 58px;
+}
+
+.alert:nth-child(2) {
+    top: 109px;
+}
+.alert:nth-child(3) {
+    top: 160px;
+}
+.alert:nth-child(4) {
+    top: 211px;
+}
+.alert:nth-child(5) {
+    top: 262px;
+}
+.alert:nth-child(6) {
+    top: 313px;
+}
+.alert:nth-child(7) {
+    top: 364px;
+}
+.alert:nth-child(8) {
+    top: 416px;
+}
+.alert:nth-child(9) {
+    top: 468px;
+}
+.alert:nth-child(0) {
+    top: 519px;
+}
+
+
+
+.register_confirm {
+    z-index: 300px;
+    position: absolute;
+    right: 0;
+    width: 240px;
+    height: 100px;
+    background: linear-gradient(0deg, rgb(181, 178, 160) 5%, rgb(12,12,12) 0%);
+    color: rgb(221, 219, 208);
+    text-align: right;
+    font-size: smaller;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+}
+

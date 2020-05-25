@@ -1,0 +1,191 @@
+/*-- appointment section  ----------------------------------------------------------------------------------------*/
+.appoint {
+    position: absolute;
+    bottom: -72%;
+    right: 0%;
+    width: 25%;
+    height: 80%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(12, 12, 12, 0.8)), url("../../images/fabric3.jpg");
+    background-size:cover;
+}
+.appoint_hover, .confirmaiton_hover {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0.6%;
+    background-color: darkred;
+}
+.confirmaiton_hover {
+    left: 25%;
+    top: 20%;
+}
+
+
+.appoint_bar, .confirmation_bar, .order_bar    {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    background-color: rgb(12, 12, 12);
+}
+
+.appoint_bar > span , .confirmation_bar > span, .order_bar span{
+    position: absolute;
+    color: rgb(255, 253, 248);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 100;
+    font-size: 1vw;
+    top: 60%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.7em;
+}
+
+.promptAppoint, .order_prompt {
+    position: absolute;
+    background-color: rgb(12, 12, 12);
+    top: 10%;
+    width: 100%;
+    height: 30%;
+    padding-top: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 100;
+    font-size: 0.8vw;
+    text-align: center;
+    color: rgb(255, 253, 248);
+}
+.order_prompt {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.promptAppoint span:first-child, .order_prompt span:first-child {
+    border-top: 1px solid white;
+}
+
+.hide_prompt, .hide_prompt2, .hide_order, .hide_alert, .yes, .no {
+    font-size: 1.2vw;
+    cursor: pointer;
+}.hide_prompt:hover, .hide_prompt2:hover, .hide_order:hover, .hide_alert:hover, .yes:hover, .no:hover {
+    text-shadow: 0 0 5px white; 
+}.hide_alert {
+    font-size: 1vw;
+}
+
+.rep_name, .Tel, .rep_info .email, .quota_remain, .total_orders, 
+#rep-select {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 15%;
+    right: -100%;
+    width: 70%;
+    height: 7%;
+    border: 1px solid rgb(181, 178, 160);
+    border-right: 0px;
+    background: #ffffff30;
+    color:  rgb(255, 253, 248);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.6vw;
+    text-align: right;
+    padding-right: 3%;
+    letter-spacing: 0.6em;
+    padding-top: 4.5%;
+}
+
+.confirm_select {
+    position: absolute;
+    width: 100%;
+    height: 9%;
+    bottom: -9%;
+    background-color: rgb(12, 12, 12);
+}
+.confirm_select span {
+    position: absolute;
+    right: 6%;
+    top: 30%;
+    color: rgb(218, 212, 195);
+    font-size: 1vw;
+    letter-spacing: 0.7em;
+    text-align: right;
+    cursor: pointer;
+    padding-left: 10%;
+}
+
+#rep-select {
+    border-radius: 0;
+    width: 86%;
+    outline: none;
+    margin: 10px 0;
+    padding-top: 2%;
+    font-size: 0.8vw;
+    letter-spacing: 0.2em;
+    font-weight: 100;
+    cursor: pointer;
+    color: rgb(181, 178, 160);
+}
+
+.rep_name{
+    top: 30%;
+} .Tel{
+    top: 40%;
+} .rep_info .email{
+    top: 50%;
+} .quota_remain{
+    top: 60%;
+} .total_orders{
+    top: 70%;
+}
+.rep_info div span {
+    letter-spacing: 0.05em;
+}
+
+.confirmation {
+    position: absolute;
+    bottom: -72%;
+    right: 32%;
+    width: 18%;
+    height: 80%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgba(12, 12, 12, 0.8)), url("../../images/fabric4.jpg");
+    background-size:cover;
+}
+
+.confirmation_screen {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 57%;
+    height: 80%;
+    background-color:  rgba(0, 0, 0, 0.9);
+    background-size:cover;
+}
+
+.order_prompt .repname {
+    text-decoration: underline;
+    font-size: 1vw;
+}
+
+
+.confirm_info {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 22%;
+    left: 20%;
+    width: 60%;
+    height:62%;
+    border: 1px solid rgb(181, 178, 160);
+    background: #ffffff30;
+    color:  rgb(218, 212, 195);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.6vw;
+    text-align: center;
+    padding-top: 5%;
+    letter-spacing: 0.6em;
+
+}.confirm_info span:first-child,.confirm_info span:nth-child(2) {
+    text-decoration: underline;
+    font-size: 1vw;
+}

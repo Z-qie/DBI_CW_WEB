@@ -1,0 +1,19 @@
+
+<?php
+    // connect and include all wrapper funcitons
+    include '../connect.php';
+
+    // get all rep names who are currently serving the same region as users'
+    $query = "SELECT username FROM Rep";
+
+    $stmt = pdoQuery($conn, $query);
+    // keep first line in selection bar safe 
+    echo "<option value=''>&#x2B18; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select a representative </option>";
+
+    // add all valid reps in the selection bar.
+    while ($row = $stmt -> fetch(PDO::FETCH_ASSOC)) {
+        echo "<option value='" . $row['username'] . "'>" . $row['username'] . "</option>";
+    }
+    $conn = null;
+?>
+

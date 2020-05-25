@@ -1,0 +1,260 @@
+/*-- purchase cart section  ----------------------------------------------------------------------------------------*/
+.cart {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.352);
+    bottom: -72%;
+    right: 0;
+    width: 32%;
+    height: 80%;
+}
+
+.purchase_hover {
+    position: absolute;
+    width: 100%;
+    height: 0.6%;
+    background-color: darkred;
+}
+
+.purchase_bar {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    background-color: rgb(12, 12, 12);
+}
+
+.purchase_bar > span {
+    position: absolute;
+    color: rgb(255, 253, 248);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 100;
+    font-size: 1vw;
+    top: 60%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 0.7em;
+    cursor: pointer;
+}
+
+.cart_item {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.8), rgb(0,0,0, 0.9)), url("../../images/fabric.jpg");
+    background-size: cover;
+}
+
+.cart_item .item_pic1 {
+    position: absolute;
+    width: 30%;
+    height: 22%;
+    top: 5%;
+    left: 6%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2), rgba(12, 12, 12, 0.2)), url("../../images/fabric.jpg");
+    background-size: cover;
+}
+.cart_item .item_pic2 {
+    position: absolute;
+    width: 30%;
+    height: 22%;
+    top: 32%;
+    left: 6%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2), rgba(12, 12, 12, 0.2)), url("../../images/fabric.jpg");
+    background-size: cover;
+}
+.cart_item .item_pic3 {
+    position: absolute;
+    width: 30%;
+    height: 22%;
+    top: 59%;
+    left: 6%;
+    background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.2), rgba(12, 12, 12, 0.2)), url("../../images/fabric.jpg");
+    background-size: cover;
+}
+
+.cart_item .item_name1 {
+    position: absolute;
+    width: 52%;
+    height: 22%;
+    top: 5%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    font-size: 0.8vw;
+}.cart_item .item_name2 {
+    position: absolute;
+    width: 52%;
+    height: 22%;
+    top: 32%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    font-size: 0.8vw;
+}.cart_item .item_name3 {
+    position: absolute;
+    width: 52%;
+    height: 22%;
+    top: 59%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    font-size: 0.8vw;
+}
+
+.cart_item .item_button1 {
+    position: absolute;
+    bottom: 73%;
+    right: -15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}.cart_item .item_button2 {
+    position: absolute;
+    bottom: 45%;
+    right: -15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}.cart_item .item_button3 {
+    position: absolute;
+    bottom: 19%;
+    right: -15%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}
+.cart_item .item_price1 {
+    position: absolute;
+    bottom: 73%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}.cart_item .item_price2 {
+    position: absolute;
+    bottom: 45%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}.cart_item .item_price3 {
+    position: absolute;
+    bottom: 19%;
+    left: 42%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    color: rgb(218, 212, 195);
+    font-weight: 100;
+    text-align: top;
+    letter-spacing: 0.5em;
+    font-size: 1vw;
+}
+
+.item_button1 span, .item_button2 span, .item_button3 span {
+    cursor: pointer;
+}.item_button1 span:first-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}.item_button1 span:last-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}.item_button2 span:first-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}.item_button2 span:last-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}.item_button3 span:first-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}.item_button3 span:last-child:hover{
+    font-weight: 900;
+    font-size: 1.2vw;
+    text-shadow: 0 0 5px white; 
+}  
+.item_button1 input, .item_button2 input, .item_button3 input {    
+    display:inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    background: #ffffff30;
+    border: 1px solid rgb(181, 178, 160);
+    outline: none;
+    text-align: center;
+}
+
+.cart_item input[type='text'] { 
+    font-size: 1vw; 
+    color: rgb(218, 212, 195);
+}
+
+
+
+.cart_item .total {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    height: 10%;
+    bottom: 0;
+    color: rgb(218, 212, 195);
+    border-top: 1px solid rgb(94, 94, 94);
+    font-size: 1vw;
+    letter-spacing: 0.7em;
+}
+
+.cart_item .total span{
+    position: absolute;
+    width: 70%;
+    left: 0;
+    top: 30%;
+    text-align: left;
+}
+
+.cart_item .total div{
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 30%;
+    text-align: right;
+    cursor: pointer;
+}
+
+.hide_cart {
+    position: absolute;
+    top: 0;
+    left: 95%;
+    color: rgb(255, 253, 248);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1.3vw;
+    cursor: pointer;
+}.hide_cart:hover {
+    text-shadow: 0 0 5px white; 
+}

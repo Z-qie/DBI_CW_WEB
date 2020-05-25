@@ -1,0 +1,149 @@
+.account_section {
+    position: absolute;
+    top: 15%;
+    right: -45%;
+    width: 45%;
+    height: 85%;
+    color: white;
+    background-color: black;
+}
+
+.req_title {
+    position: absolute;
+    font-size: 1vw;
+    color: white;
+    padding-top: 0.8%;
+    padding-left: 75%;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 700;
+    text-shadow: 0 0 5px white; 
+}
+
+
+
+
+.sale_rep_des, .password_change, .tel_change, .email_change {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 30%;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.8vw;
+    letter-spacing: 0.01vw;
+    font-weight: 100;
+    line-height: 2vh;
+}.password_change{
+    top: 70%;
+}.tel_change{
+    top: 80%;
+}.email_change{
+    top: 90%;
+}.password_change span, .tel_change span, .email_change span, .comfirm_button{
+    position: absolute;
+    top: -10%;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}.comfirm_button{
+    top: 1%;
+    right: 5%;
+    font-weight: 100;
+}
+
+
+.new_password, .new_code, .new_tel, .new_email{
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    width: 60%;
+    height: 4%;
+    background: #ffffff41;
+    border: 0.5px solid rgb(255, 255, 255);
+    padding: 2%;
+    outline: none;
+    text-align: left;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}.new_code{
+    width: 20%;
+} .new_tel{
+    width: 35%;
+    left: 25%;
+}
+
+.alert_password, .alert_country_code, .alert_telephone_number, .alert_email {
+    position: absolute;
+    width: 40%;
+    left: 60%;
+    height: 20%;
+    top: 0;
+    border-top: 2px solid rgb(255, 255, 255);
+        background-color: rgb(95, 95, 95);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 1%;
+}
+
+
+
+
+.sale_rep_des span, .current_country span, .current_status span{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}
+
+
+#rep_quantity_chart, #rep_revenue_chart, #rep_order_chart {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    width: 24%;
+    height: 35%;
+} #rep_revenue_chart{
+    left: 38%;
+} #rep_quantity_chart {
+    left: 66%;
+}
+
+
+.password_confirm, .tel_confirm, .email_confirm{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    background-color:white;
+    color: black;
+    font-size: 0.7vw;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 1%;
+}.hide_change_confirm:hover,.comfirm_button:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px white; 
+    text-decoration: line-through;
+
+}
+    
+.hide_account:hover {
+    text-shadow: 0 0 5px white; 
+    cursor: pointer;
+}
+.hide_account{
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    width: 5%;
+    height: 5%;
+    padding-top: 0.8%;
+    color: white;
+    font-size: 1.1vw;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 0 0 5px white; 
+}

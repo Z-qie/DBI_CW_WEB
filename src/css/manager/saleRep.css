@@ -1,0 +1,147 @@
+.sale_rep_section {
+    position: absolute;
+    top: 10%;
+    right: -30%;
+    width: 30%;
+    height: 90%;
+    color: white;
+    background-color: black;
+}
+
+.req_title, .country_title, .working_status_title {
+    position: absolute;
+    font-size: 1vw;
+    color: white;
+    padding-top: 0.8%;
+    padding-left: 80%;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}.country_title, .working_status_title {
+    padding-left: 2%;
+    font-size: 0.8vw;
+}
+
+.rep_selecting, .country_selecting, .status_selecting {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    height: 3%;
+    width: 80%;
+    font-size: 0.5vw;
+}.country_selecting, .status_selecting {
+    top: 55%;
+    left: 2.5%;
+    height: 18%;
+    width: 70%;
+    font-size: 0.7vw;
+}.country_confirm, .status_confirm {
+    position: absolute;
+    top: 72%;
+    left: 80%;
+    height: 20%;
+    font-size: 0.7vw;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 100;
+}.country_confirm:hover, .status_confirm:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px white; 
+    text-decoration: line-through;
+}
+
+#rep_selecting, #country_selecting ,#status_selecting {
+    position: absolute;
+    display: block;
+    color: rgb(192, 193, 191);
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    background: #ffffff41;
+    padding-right: 3%;
+    letter-spacing: 0.6em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 0;
+    outline: none;
+    font-size: 0.6vw;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+
+.sale_rep_des, .current_country, .current_status {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    width: 80%;
+    height: 70%;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.7vw;
+    letter-spacing: 0.01vw;
+    font-weight: 100;
+    line-height: 2vh;
+}.current_country, .current_status { 
+    left: 2.5%;
+    top: 35%;
+}
+.sale_rep_des span, .current_country span, .current_status span{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}
+.country_assign, .working_status_assign{
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    height: 15%;
+    width: 80%;
+    font-size: 0.5vw;
+    border: 0.5px solid rgb(255, 255, 255);
+}.country_assign{ 
+    bottom: 21%;
+}
+
+#rep_quantity_chart, #rep_revenue_chart, #rep_order_chart {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    width: 24%;
+    height: 30%;
+} #rep_revenue_chart{
+    left: 38%;
+} #rep_quantity_chart {
+    left: 66%;
+}
+
+
+.country_assign_confirm, .status_assign_confirm{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    color: black;
+    font-size: 0.7vw;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 10%;
+}
+    
+.hide_request_confirm:hover, .hide_rep_section:hover, .hide_request_section:hover {
+    text-shadow: 0 0 5px white; 
+    cursor: pointer;
+}
+.hide_rep_section{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+    height: 6%;
+    color: white;
+    font-size: 1.1vw;
+    font-weight: 100;
+    padding-left: 4%;
+    text-shadow: 0 0 5px white; 
+}

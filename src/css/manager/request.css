@@ -1,0 +1,102 @@
+.request_section {
+    position: absolute;
+    overflow-y: scroll;
+    top: 10%;
+    right: -30%;
+    width: 30%;
+    height: 90%;
+    color: white;
+    background-color: black;
+}
+.request_title {
+    position: fixed;
+    top: 8%;
+    font-size: 1vw;
+    color: white;
+    padding-top: 0.8%;
+    padding-left: 24%;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}
+.hide_request_section{
+    position: fixed;
+    top: 8%;
+    font-size: 1.1vw;
+    color: white;
+    padding-top: 0.8%;
+    padding-left: 2%;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}
+
+
+
+
+
+.request_list {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 30%;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.7vw;
+    letter-spacing: 0.01vw;
+    font-weight: 500;
+}
+.request_list .time {
+    position: absolute;
+    top: 15%;
+    left: 9%;
+}.request_list .date {
+    position: absolute;
+    top: 23%;
+    left: 7.5%;
+    font-weight: 100;
+}.request_list .description {
+    position: absolute;
+    text-transform: uppercase;
+    top: 15%;
+    left: 24%;
+}
+.request_list .grant, .request_list .refuse_request, .request_list .rep_name, .request_list .status  {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.request_list .grant, .request_list .refuse_request {
+    text-align: right;
+    top: 15%;
+    left: 85%;
+}.request_list .refuse_request {
+    top: 23%;
+}
+.request_list .rep_name  {
+    top: 23%;
+    left: 24%;
+}.request_list .status {
+    top: 31%;
+    left: 24%;
+}.request_list .grant:hover, .request_list .refuse_request:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px white; 
+    text-decoration: line-through;
+}
+
+
+
+.request_confrim{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 40%;
+    background-color:white;
+    color: black;
+    font-size: 0.7vw;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 3%;
+}

@@ -1,0 +1,229 @@
+/* ---------------------------------------------- frame -------------------------------------------------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 1%;
+  }::-webkit-scrollbar-track {
+    background: #ffffff30;
+  }::-webkit-scrollbar-thumb {
+    background: #ffffff30;
+  }::-webkit-scrollbar-thumb:hover {
+    background: #ffffff30;
+  }
+
+.dashboard_section {
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    width: 88%;
+    height: 86%;
+    color: white;
+}
+
+.total_quantity, 
+.total_revenue, 
+.total_rep, 
+.total_region, 
+.total_order,
+.processing,
+.cancelled,
+.normal, 
+.abnormal,
+.order_info {
+    position: absolute;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    width: 22%;
+    height: 20%;
+    border: 0.7px solid rgb(192, 192, 188);
+    background: #ffffff17;
+}.total_quantity {
+    top: 22%;
+}.total_rep, .total_region, .total_order {
+    width: 25%;
+    left: 23%;
+    height: 42%;
+    font-size: 0.6vw;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}.total_region {
+    left: 49%;
+}.total_order {
+    left: 75%;
+}.normal, .abnormal, .processing, .cancelled {
+    overflow-y: scroll;
+    width: 36.5%;
+    top: 73%;
+    height: 27%;
+}.abnormal {
+    left: 37.5%;
+}.processing {
+    top: 44%;
+}.cancelled {
+    top: 44%;
+    left: 37.5%;
+}
+.order_info {
+    top: 44%;
+    left: 75%;
+    width: 25%;
+    height: 56%;
+}
+
+.title, .title_fixed {
+    position: absolute;
+    font-size: 0.7vw;
+    color: white;
+    padding-top: 0.8%;
+    padding-left: 2%;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    text-transform: capitalize;
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}.title_fixed{
+    position: fixed;
+    padding-top: 0.2%;
+    padding-left: 0.4%;
+
+}
+/* ---------------------------------------------- total_revenue -------------------------------------------------------------------------------------------- */
+#total_revenue_chart, 
+#total_quantity_chart, 
+#rep_total_revenue_chart, 
+#rep_total_quantity_chart, 
+#region_total_revenue_chart, 
+#region_total_quantity_chart, 
+#total_revenue_order,
+#total_quantity_order{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}#rep_total_revenue_chart, #region_total_revenue_chart {
+    top: 50%;
+    width: 50%;
+    height: 50%;
+}#rep_total_quantity_chart, #region_total_quantity_chart{
+    left: 48%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+}#total_revenue_order{
+    width: 50%;  
+}#total_quantity_order{
+    width: 50%;
+    left: 50%;
+}
+
+/* ---------------------------------------------- total orders -------------------------------------------------------------------------------------------- */
+
+.select_rep, .rep_des, .select_region, .region_des {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 7%;
+    width: 80%;
+    font-size: 0.5vw;
+}.rep_des, .region_des {
+    top: 25%;
+}.total_order_des{
+    position: absolute;
+    font-size: 0.5vw; 
+    top: 10%;
+    left: 8%;
+    width: 92%;
+}
+#rep-select, #region-select  {
+    position: absolute;
+    display: block;
+    color: rgb(192, 193, 191);
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    background: #ffffff41;
+    text-align: right;
+    padding-right: 3%;
+    letter-spacing: 0.6em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 0;
+    outline: none;
+    font-size: 0.6vw;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+/* ---------------------------------------------- orders -------------------------------------------------------------------------------------------- */
+
+.order_list {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 30%;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.6vw;
+    letter-spacing: 0.01vw;
+    font-weight: 500;
+}
+.order_list .time {
+    position: absolute;
+    top: 15%;
+    left: 9%;
+}.order_list .date {
+    position: absolute;
+    top: 33%;
+    left: 7.5%;
+    font-weight: 100;
+}.order_list .description {
+    position: absolute;
+    text-transform: uppercase;
+    top: 15%;
+    left: 24%;
+}
+.order_list .check_detail, .order_list .rep_name, .order_list .status  {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.order_list .check_detail {
+    text-align: right;
+    top: 15%;
+    left: 85%;
+}.order_list .rep_name  {
+    top: 33%;
+    left: 24%;
+}.order_list .status {
+    top: 51%;
+    left: 24%;
+}.order_list .check_detail:hover {
+    cursor: pointer;
+    text-shadow: 0 0 5px white; 
+    text-decoration: line-through;
+}
+#order_detail_chart1, #order_detail_chart2 {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    height: 10%;
+}#order_detail_chart2 {
+    top: 15%;
+}
+
+.info_des {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 80%;
+    height: 70%;
+    color: white;
+    font-family: "Gill Sans", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+    font-size: 0.6vw;
+    letter-spacing: 0.01vw;
+    font-weight: 100;
+    line-height: 1.7vh;
+}.info_des span{
+    font-weight: 500;
+    text-shadow: 0 0 5px white; 
+}
+

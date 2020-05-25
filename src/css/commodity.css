@@ -1,0 +1,20 @@
+.commodity_sec {
+    position: absolute;
+    background-color: rgb(244, 244, 244);
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.commodity_sec .type1, .commodity_sec .type2, .commodity_sec .type3 {
+    position: absolute;
+    background-image: url("../../images/type1.jpg");
+    background-size: 100% 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+} .commodity_sec .type2{
+    background-image: url("../../images/type2.jpg");
+} .commodity_sec .type3 {
+    background-image: url("../../images/type3.jpg");
+}
