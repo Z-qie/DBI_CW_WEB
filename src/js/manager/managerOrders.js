@@ -1,5 +1,5 @@
 $(() => {
-
+    
     // processing orderes ==========================================================================================
     $.ajax({
         url: "../php/manager/getProcessingOrder.php",

@@ -38,7 +38,6 @@
     //get all revenue and quantity of order number that rep have
     $query5 = "SELECT * FROM Orders WHERE status = 'completed' AND rep_ID = $rep_ID";
     $stmt5 = pdoQuery($conn, $query5);
-    $row5 = $stmt5 -> fetch(PDO::FETCH_ASSOC);
     $total_revenue_1 = 0;
     $total_revenue_2 = 0;
     $total_revenue_3 = 0;

@@ -35,6 +35,9 @@
     left: 0;
 } */
 
+
+
+
 .navbar {
     position: absolute;
     background: linear-gradient(0deg, rgb(255, 253, 248) 55%, rgb(12, 12, 12) 55%);
@@ -87,11 +90,11 @@
 }
 
 .nav_option .orders {
-    left: 47%;
-}
-.nav_option .account {
     left: 65%;
 }
+/* .nav_option .account {
+    left: 65%;
+} */
 .nav_option .logout {
     left: 85%;
     width: 15%;

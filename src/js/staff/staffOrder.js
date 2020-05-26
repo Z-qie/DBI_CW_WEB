@@ -109,7 +109,7 @@ $(() => {
                                     }
                                     if (result.trim() == 'cancelDone') { 
                                         $(e.target).parent().siblings('.delete_refuse')
-                                        .html("Deletion done!<br /> You have delete the order.<br /><br /><span class='hide_refuse'>&#x29CB;</span></div>")
+                                        .html("Deletion done!<br /> You have deleted the order.<br /><br /><span class='hide_refuse'>&#x29CB;</span></div>")
                                         $(e.target).parent().siblings('.delete_refuse').stop().slideDown(1400, "easeInOutCubic")
 
                                         // update order list

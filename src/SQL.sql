@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS DBICW;
-CREATE DATABASE DBICW;
-USE DBICW;
+
+USE zy21586;
 
 # ==================================== customer relation ==========================================================
 DROP TABLE IF EXISTS Customer;
@@ -16,7 +15,6 @@ CREATE TABLE Customer (
   country VARCHAR(45) NOT NULL,
   PRIMARY KEY (customer_ID)
 );
-
 # ==================================== mask relation ==========================================================
 DROP TABLE IF EXISTS Mask;
 CREATE TABLE Mask (
@@ -25,15 +23,6 @@ CREATE TABLE Mask (
   mask_type VARCHAR(45) NOT NULL,
   PRIMARY KEY (mask_id)
 );
-# -- masks' data initialization -----------------------------------------------
-INSERT INTO `DBICW`.`Mask`
-(`mask_id`,
-`unit_price`,
-`mask_type`)
-VALUES
-(1, 4.5, 'N95 respirator'),
-(2, 5.3, 'Surgical mask'),
-(3, 6.7, 'Surgical N95 respirator');
 
 # ==================================== Rep relation ==========================================================
 DROP TABLE IF EXISTS Rep;
@@ -46,20 +35,12 @@ CREATE TABLE Rep (
   telephone VARCHAR(100) NOT NULL COMMENT '(Country) + area (can be null) + number',
   email VARCHAR(255) NOT NULL,
   country VARCHAR(45) NULL DEFAULT NULL COMMENT 'Can be null at first',
-  quota INT UNSIGNED NULL DEFAULT 0,
+  quota INT NULL DEFAULT 0,
   working_status VARCHAR(255) NOT NULL COMMENT 'active(assigned/to be assigned), left(not working any more, for further statistics)',
   PRIMARY KEY (rep_ID));
 
-# -- Rep initialization -----------------------------------------------
-INSERT INTO Rep 
-    (username, password, first_name, last_name, telephone, email, country, quota, working_status ) 
-VALUES 
-    ('Hnx', 'Daniel1997', 'Ziqi', 'Yang', '(86)15901184506', 'danielyang1997@outlook.com', 'United Kindom', 1200, 'active'),
-    ('Zz', 'Daniel1997', 'Kaixin', 'Li', '(86)13311077976', 'danielyang1997@outlook.com', 'United Kindom', 1200, 'active');
-    
 
-alter table Rep modify quota INT NULL DEFAULT 0;
-
+# ==================================== Order relation ==========================================================
 DROP TABLE IF EXISTS Orders;
 CREATE TABLE Orders (
   order_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -86,10 +67,7 @@ CREATE TABLE Orders (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
     
-    
 # ==================================== quota_request relation ==========================================================
-alter table Quota_Request modify request_ID INT UNSIGNED NOT NULL AUTO_INCREMENT;
-
 DROP TABLE IF EXISTS Quota_Request;
 CREATE TABLE Quota_Request (
   request_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -97,10 +75,8 @@ CREATE TABLE Quota_Request (
   rep_ID INT UNSIGNED NOT NULL,
   quota_quantity INT UNSIGNED NOT NULL,
   request_status VARCHAR(20) NOT NULL COMMENT 'no response/updated/regranted/refused',
-  INDEX rep_ID_idx (rep_ID ASC) VISIBLE,
   PRIMARY KEY (request_ID),
-  CONSTRAINT request_rep_ID
-    FOREIGN KEY (rep_ID)
+  CONSTRAINT rep_ID FOREIGN KEY (rep_ID)
     REFERENCES Rep (rep_ID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);

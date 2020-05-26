@@ -149,10 +149,7 @@ $(() => {
                     });
                     //====================== total revenue =============================================
                     // create bar
-                    var total_revenue = 0;
-                    for (let index = 0; index < 21; index++) {
-                        total_revenue += parseFloat(dataArray[index])
-                    }
+                    var total_revenue = parseFloat(dataArray[12]) +parseFloat(dataArray[13]) +parseFloat(dataArray[14]) + parseFloat(dataArray[18]) +parseFloat(dataArray[19]) +parseFloat(dataArray[20]);
 
                     var rep_revenue_chart = echarts.init(document.getElementById('rep_revenue_chart'))
                     rep_revenue_chart.setOption({
@@ -161,7 +158,7 @@ $(() => {
                             left: '-5%',
                             top: '10%',
                             show: true,
-                            text: 'Total Sale: ' + total_revenue.toFixed(2),
+                            text: 'Total Sale: ' + total_revenue.toFixed(2)+ "\n(completed)",
                             textStyle: {
                                 fontSize: 9,
                                 color: 'white',
@@ -245,10 +242,8 @@ $(() => {
                     });
                     
                     //====================== total quantity =============================================
-                    var total_quantity = 0;
-                    for (let index = 3; index < 24; index++) {
-                        total_quantity += parseInt(dataArray[index])
-                    }
+                    var total_quantity = parseInt(dataArray[15]) + parseInt(dataArray[16]) + parseInt(dataArray[17]) + parseInt(dataArray[21]) + parseInt(dataArray[22]) + parseInt(dataArray[23]);
+                   
                     // create bar
                     var rep_quantity_chart = echarts.init(document.getElementById('rep_quantity_chart'))
                     rep_quantity_chart.setOption({
@@ -257,7 +252,7 @@ $(() => {
                                 left: '-5%',
                                 top: '10%',
                                 show: true,
-                                text: 'Total Quantity: ' + total_quantity,
+                                text: 'Total Quantity: ' + total_quantity + "\n(completed)",
                                 textStyle: {
                                     fontSize: 9,
                                     color: 'white',

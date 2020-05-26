@@ -13,7 +13,6 @@
     //get all revenue and quantity of order in processing
     $query = "SELECT * FROM Orders WHERE status = 'processing' AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $processing_total_revenue_1 = 0;
     $processing_total_revenue_2 = 0;
     $processing_total_revenue_3 = 0;
@@ -33,7 +32,6 @@
     //get all revenue and quantity of order cancelled
     $query = "SELECT * FROM Orders WHERE (status = 'cancelled by user' OR status = 'cancelled by rep') AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $cancelled_total_revenue_1 = 0;
     $cancelled_total_revenue_2 = 0;
     $cancelled_total_revenue_3 = 0;
@@ -53,7 +51,6 @@
     //get all revenue and quantity of normal order 
     $query = "SELECT * FROM Orders WHERE post_status = 'normal' AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $normal_total_revenue_1 = 0;
     $normal_total_revenue_2 = 0;
     $normal_total_revenue_3 = 0;
@@ -73,7 +70,6 @@
     //get all revenue and quantity of abnormal order 
     $query = "SELECT * FROM Orders WHERE (post_status = 'abnormal' OR post_status = 'abnormal to be reviewed') AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
-    $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $abnormal_total_revenue_1 = 0;
     $abnormal_total_revenue_2 = 0;
     $abnormal_total_revenue_3 = 0;
@@ -96,17 +92,17 @@
     $stmt = pdoQuery($conn, $query);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $processing_order = $row['processing_order'];
-    //get order count of order in processing
+    //get order count of order cancelled
     $query = "SELECT COUNT(order_ID) AS cancelled_order FROM Orders WHERE (status = 'cancelled by user' OR status = 'cancelled by rep') AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $cancelled_order = $row['cancelled_order'];
-    //get order count of order in processing
+    //get order count of normal order 
     $query = "SELECT COUNT(order_ID) AS normal_order FROM Orders WHERE post_status = 'normal' AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);
     $normal_order = $row['normal_order'];
-    //get order count of order in processing
+    //get order count of abnormal order
     $query = "SELECT COUNT(order_ID) AS abnormal_order FROM Orders WHERE (post_status = 'abnormal' OR post_status = 'abnormal to be reviewed') AND rep_ID = $rep_ID";
     $stmt = pdoQuery($conn, $query);
     $row = $stmt -> fetch(PDO::FETCH_ASSOC);

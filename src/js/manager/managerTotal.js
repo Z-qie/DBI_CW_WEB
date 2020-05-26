@@ -26,7 +26,7 @@ $(() => {
                         left: '8%',
                         top: '20%',
                         show: true,
-                        text: '$ ' + (parseFloat(dataArray[3]) + parseFloat(dataArray[3]) + parseFloat(dataArray[3])).toFixed(2), // total revenue
+                        text: '$ ' + (parseFloat(dataArray[3]) + parseFloat(dataArray[4]) + parseFloat(dataArray[5])).toFixed(2), // total revenue
                         textStyle: {
                             fontSize: 12,
                             color: 'white',

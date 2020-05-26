@@ -24,13 +24,13 @@
     $total_customer = $row2['total_customer'];
 
     //get all normal order number in selected region
-    $query3 = "SELECT COUNT(order_ID) as total_normal FROM Orders, Rep WHERE post_status = 'normal' AND country = '$region'";
+    $query3 = "SELECT COUNT(order_ID) as total_normal FROM Orders INNER JOIN Rep ON Rep.rep_ID = Orders.rep_ID WHERE post_status = 'normal' AND country = '$region'";
     $stmt3 = pdoQuery($conn, $query3);
     $row3 = $stmt3 -> fetch(PDO::FETCH_ASSOC);
     $total_normal = $row3['total_normal'];
 
     //get all abnormal order number in selected region
-    $query4 = "SELECT COUNT(order_ID) as total_abnormal FROM Orders, Rep WHERE (post_status = 'abnormal' OR post_status = 'abnormal to be reviewed') AND country = '$region'";
+    $query4 = "SELECT COUNT(order_ID) as total_abnormal FROM Orders INNER JOIN Rep ON Rep.rep_ID = Orders.rep_ID WHERE (post_status = 'abnormal' OR post_status = 'abnormal to be reviewed') AND country = '$region'";
     $stmt4 = pdoQuery($conn, $query4);
     $row4 = $stmt4 -> fetch(PDO::FETCH_ASSOC);
     $total_abnormal = $row4['total_abnormal'];
@@ -41,9 +41,8 @@
 
 
     //get all revenue and quantity of order number in selected region
-    $query5 = "SELECT * FROM Orders, Rep WHERE status = 'completed' AND country = '$region'";
+    $query5 = "SELECT * FROM Orders INNER JOIN Rep ON Rep.rep_ID = Orders.rep_ID WHERE status = 'completed' AND country = '$region'";
     $stmt5 = pdoQuery($conn, $query5);
-    $row5 = $stmt5 -> fetch(PDO::FETCH_ASSOC);
     $total_revenue_1 = 0;
     $total_revenue_2 = 0;
     $total_revenue_3 = 0;

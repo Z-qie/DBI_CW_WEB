@@ -16,7 +16,7 @@
     $query2 = "
         SELECT order_ID, rep_ID, status, start_date, type1_quantity, type2_quantity, type3_quantity, type1_unit_price, type2_unit_price, type3_unit_price
         FROM Orders
-        WHERE customer_ID = $customer_ID";
+        WHERE customer_ID = $customer_ID ORDER BY order_ID DESC";
     $stmt2 = pdoQuery($conn, $query2);
     $count = 0;
     // get order info in loop
