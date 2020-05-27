@@ -364,7 +364,10 @@ $(() => {
             if (error_register[0] == 1) {
                 $(".password_confirm").slideUp();  
                 $(".password_confirm").html("Please fill up password information correctly!<div class='hide_change_confirm'>&#x29CB;</div>").slideDown();
-
+                $('.password_confirm .hide_change_confirm').click(() => {
+                            $('.password_confirm').slideUp();
+                            $('.staff_navbar .account span').trigger('click')
+                        })
             } else { // else, send data to validate.
                 $.ajax({
                     url: "../php/staff/changeRepPassword.php",
@@ -398,7 +401,10 @@ $(() => {
             if (error_register[1] == 1 || error_register[2] == 1) {
                 $(".tel_confirm").slideUp();  
                 $(".tel_confirm").html("Please fill up tel information correctly!<div class='hide_change_confirm'>&#x29CB;</div>").slideDown();
-
+                 $('.tel_confirm .hide_change_confirm').click(() => {
+                            $('.tel_confirm').slideUp();
+                            $('.staff_navbar .account span').trigger('click')
+                        })
             } else { // else, send data to validate.
                 $.ajax({
                     url: "../php/staff/changeRepTel.php",
@@ -433,7 +439,10 @@ $(() => {
             if (error_register[3] == 1) {
                 $(".email_confirm").slideUp();  
                 $(".email_confirm").html("Please fill up tel information correctly!<div class='hide_change_confirm'>&#x29CB;</div>").slideDown();
-
+                 $('.email_confirm .hide_change_confirm').click(() => {
+                            $('.email_confirm').slideUp();
+                            $('.staff_navbar .account span').trigger('click')
+                        })
             } else { // else, send data to validate.
                 $.ajax({
                     url: "../php/staff/changeRepEmail.php",

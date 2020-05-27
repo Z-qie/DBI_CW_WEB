@@ -113,7 +113,7 @@ $(() => {
                                         $(e.target).parent().siblings('.delete_refuse').stop().slideDown(1400, "easeInOutCubic")
 
                                         // update order list
-                                        $('.description').html('POST-STATUS: NOT SOLD')
+                                        $(e.target).parent().siblings('.description').html('POST-STATUS: NOT SOLD')
                                         $(e.target).parent().siblings('.title').html("ID: " + parseInt($(e.target).parent().siblings('.title').html().substring(4)) + " &nbsp;STATUS: CANCELLED BY REP")
                                     }
                                     $('.hide_refuse').click((ev2) => {
@@ -153,7 +153,7 @@ $(() => {
                                     $(e.target).siblings('.complete_confirm').stop().slideDown(1400, "easeInOutCubic")
 
                                     // update order list
-                                    $('.description').html('POST-STATUS: NORMAL')
+                                    $(e.target).siblings('.description').html('POST-STATUS: NORMAL')
                                     $(e.target).siblings('.title').html("ID: " + parseInt($(e.target).siblings('.title').html().substring(4)) + " &nbsp;STATUS: COMPLETED")
                                 }
 

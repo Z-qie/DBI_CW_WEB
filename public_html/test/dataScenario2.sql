@@ -29,7 +29,7 @@ CREATE TABLE Customer (
 # create Mask relation ==========================================================
 
 CREATE TABLE Mask (
-  mask_id SMALLINT NOT NULL,
+  mask_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   unit_price DECIMAL(10,2) NOT NULL,
   mask_type VARCHAR(45) NOT NULL,
   PRIMARY KEY (mask_id)
@@ -47,7 +47,7 @@ CREATE TABLE Rep (
   email VARCHAR(255) NOT NULL,
   country VARCHAR(45) NULL DEFAULT NULL COMMENT 'Can be null at first',
   quota INT NULL DEFAULT 0,
-  working_status VARCHAR(255) NOT NULL COMMENT 'active(assigned/to be assigned), left(not working any more, for further statistics)',
+  working_status VARCHAR(20) NOT NULL COMMENT 'active(assigned/to be assigned), left(not working any more, for further statistics)',
   PRIMARY KEY (rep_ID));
 
 # create Order relation ==========================================================
@@ -97,11 +97,11 @@ CREATE TABLE Quota_Request (
 
 # 1. Mask data initialization ==========================================================
 INSERT INTO Mask
-(mask_ID, unit_price, mask_type)
+(unit_price, mask_type)
 VALUES
-(1, 4.50, 'N95 respirator'),
-(2, 5.30, 'Surgical mask'),
-(3, 6.70, 'Surgical N95 respirator');
+(4.50, 'N95 respirator'),
+(5.30, 'Surgical mask'),
+(6.70, 'Surgical N95 respirator');
 
 
 # 2. Customer data initialization ==========================================================
@@ -111,47 +111,76 @@ INSERT INTO Customer
 VALUES
 # in Australia
 ('Mike', 'password', 'Mike', 'Lee', '(61)4324135135', 'mikelee@unnc.com', 'mikelee', 'Australia'),
-('Rose', 'password', 'Rose', 'Plant', '(61)632519197', 'roseplant@unnc.com', 'roseplant', 'Australia'),
 # in Brazil
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Eman', 'password', 'Eman', 'Summers', '(55)21342344', 'emansummers@unnc.com', 'emansummers', 'Brazil'),
 # in China
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Hua', 'password', 'Hua', 'Li', '(86)13301432513', 'huali@unnc.com', 'huali', 'China'),
 # in Denmark
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China');
+('Rose', 'password', 'Rose', 'Plant', '(45)632519197', 'roseplant@unnc.com', 'roseplant', 'Denmark'),
 # in Egypt
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Elliott', 'password', 'Elliott', 'Shields', '(20)32513625', 'elliottshields@unnc.com', 'elliottshields', 'Egypt'),
 # in Japan
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Kosuma', 'password', 'Kosuma', 'Yokuchi', '(81)562763452', 'kosumauokuchi@unnc.com', 'kosumauokuchi', 'Japan'),
 # in United Kingdom
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Sherry', 'password', 'Sherry', 'Miller', '(44)135145154', 'sherrymiller@unnc.com', 'sherrymiller', 'United Kingdom'),
 # in Mexico
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
-('Daniel', 'password', 'Daniel', 'YANG', '(86)15901184506', 'danielyang@unnc.com', 'danielyang', 'China'),
+('Rafael', 'password', 'Rafael', 'Tucker', '(52)4321443506', 'rafaeltucker@unnc.com', 'rafaeltucker', 'Mexico');
+
 
 # 3. Rep data initialization ==========================================================
 
+INSERT INTO Rep
+(username, password, first_name, last_name, telephone, email, quota, country, working_status)
+VALUES
+# in Australia
+('Bonita', 'password', 'Bonita', 'Cross', '(61)4152634321', 'bonitacross@unnc.com', 1000, 'Australia', 'active'),
+('Zeeshan', 'password', 'Zeeshan', 'Wickens', '(61)9876563244', 'zeeshanwickens@unnc.com', 1000, 'Australia', 'active'),
+
+# in Brazil
+('Francesca', 'password', 'Francesca', 'Jones', '(55)432415316', 'francescajones@unnc.com', 1000, 'Brazil', 'active'),
+('Drew', 'password', 'Drew', 'Powers', '(55)348096239', 'drewpowers@unnc.com', 1000, 'Brazil', 'active'),
+
+# in China
+('Yalan', 'password', 'Yalan', 'Liu', '(86)67584960504', 'yalanliu@unnc.com', 1000, 'China', 'active'),
+('Naixuan', 'password', 'Naixuan', 'He', '(86)87439035534', 'naixuanhe@unnc.com', 1000, 'China', 'active'),
+
+# in Denmark
+('Everly', 'password', 'Everly', 'Michael', '(45)906295843', 'everlymichael@unnc.com', 1000, 'Denmark', 'active'),
+('Kaydee', 'password', 'Kaydee', 'Mathis', '(45)235968305', 'kaydeemathis@unnc.com', 1000, 'Denmark', 'active'),
+
+# in Egypt
+('Georgia', 'password', 'Georgia', 'Gill', '(20)43541436', 'georgiagill@unnc.com', 1000, 'Egypt', 'active'),
+('Mahir', 'password', 'Mahir', 'Spence', '(20)54166314', 'mahirspence@unnc.com', 1000, 'Egypt', 'active'),
+
+# in Japan
+('Cem', 'password', 'Cem', 'Meyer', '(81)973525997', 'cemmeyer@unnc.com', 1000, 'Japan', 'active'),
+('Yi', 'password', 'Yi', 'Liku', '(81)809653134', 'yiliku@unnc.com', 1000, 'Japan', 'active'),
+
+# in United Kingdom
+('Phyllis', 'password', 'Phyllis', 'Stein', '(44)128437970', 'phyllisstein@unnc.com', 1000, 'United Kingdom', 'active'),
+('Kira', 'password', 'Kira', 'Morrow', '(44)454331641', 'kiramorrow@unnc.com', 1000, 'United Kingdom', 'active'),
+
+# in Mexico
+('Whitney', 'password', 'Whitney', 'Strong', '(52)6431771371', 'whitneystrong@unnc.com', 1000, 'Mexico', 'active'),
+('Edmund', 'password', 'Edmund', 'Lam', '(52)5161413655', 'edmundlam@unnc.com', 1000, 'Mexico', 'active');
 
 
 
+# 4. Orders data initialization ==========================================================
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO Orders
+(customer_ID, rep_ID, start_date, status, post_status, type1_quantity, type2_quantity, type3_quantity, type1_unit_price, type2_unit_price, type3_unit_price)
+VALUES
+# customer: Sherry Miller, rep: Kira Morrow
+# keep in processing but cannot be cancelled by customer and rep
+(7, 14, 2020-05-10 00:00:00, processing, not sold, 200, 200, 200, 4.50, 5.30, 6.70),
+# customer: Sherry Miller, rep: Kira Morrow
+# keep in processing but will be set as abnormal to be reviewed once the rep cmoplete the first order.
+(7, 14, 2020-05-11 00:01:00, processing, not sold, 100, 200, 300, 4.50, 5.30, 6.70),
+# customer: Sherry Miller, rep: Kira Morrow
+# keep in processing but will be set as abnormal to be reviewed once the rep cmoplete the first order.
+(7, 14, 2020-05-12 00:02:00, processing, not sold, 300, 200, 100, 4.50, 5.30, 6.70);
 
 
 
