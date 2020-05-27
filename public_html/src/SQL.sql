@@ -1,8 +1,14 @@
 
 USE zy21586;
 
-# ==================================== customer relation ==========================================================
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Quota_Request;
 DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS Rep;
+DROP TABLE IF EXISTS Mask;
+
+# ==================================== customer relation ==========================================================
+
 CREATE TABLE Customer (
   customer_ID INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Automatically generated Customer_ID',
   username VARCHAR(16) UNIQUE NOT NULL COMMENT 'User Name within 4-16 chars.',
@@ -15,8 +21,9 @@ CREATE TABLE Customer (
   country VARCHAR(45) NOT NULL,
   PRIMARY KEY (customer_ID)
 );
+
 # ==================================== mask relation ==========================================================
-DROP TABLE IF EXISTS Mask;
+
 CREATE TABLE Mask (
   mask_id SMALLINT NOT NULL,
   unit_price DECIMAL(10,2) NOT NULL,
@@ -25,7 +32,7 @@ CREATE TABLE Mask (
 );
 
 # ==================================== Rep relation ==========================================================
-DROP TABLE IF EXISTS Rep;
+
 CREATE TABLE Rep (
   rep_ID INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Automatically generated Customer_ID',
   username VARCHAR(16) UNIQUE NOT NULL COMMENT 'User Name with 4-16 chars.',
@@ -39,9 +46,8 @@ CREATE TABLE Rep (
   working_status VARCHAR(255) NOT NULL COMMENT 'active(assigned/to be assigned), left(not working any more, for further statistics)',
   PRIMARY KEY (rep_ID));
 
-
 # ==================================== Order relation ==========================================================
-DROP TABLE IF EXISTS Orders;
+
 CREATE TABLE Orders (
   order_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   customer_ID INT UNSIGNED NOT NULL,
@@ -61,14 +67,14 @@ CREATE TABLE Orders (
     REFERENCES Customer (customer_ID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT rep_ID
+  CONSTRAINT rep_ID_fk1
     FOREIGN KEY (rep_ID)
     REFERENCES Rep (rep_ID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
     
 # ==================================== quota_request relation ==========================================================
-DROP TABLE IF EXISTS Quota_Request;
+
 CREATE TABLE Quota_Request (
   request_ID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   request_date DATETIME NOT NULL,
@@ -76,10 +82,23 @@ CREATE TABLE Quota_Request (
   quota_quantity INT UNSIGNED NOT NULL,
   request_status VARCHAR(20) NOT NULL COMMENT 'no response/updated/regranted/refused',
   PRIMARY KEY (request_ID),
-  CONSTRAINT rep_ID FOREIGN KEY (rep_ID)
+  CONSTRAINT rep_ID_fk2
+    FOREIGN KEY (rep_ID)
     REFERENCES Rep (rep_ID)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
     
  
-    
+ 
+   
+
+
+# Mask data initialization ==========================================================
+INSERT INTO Mask
+(mask_id, unit_price, mask_type)
+VALUES
+(1, 4.50, 'N95 respirator'),
+(2, 5.30, 'Surgical mask'),
+(3, 6.70, 'Surgical N95 respirator');
+
+

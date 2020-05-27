@@ -158,7 +158,7 @@ $(() => {
                             left: '-5%',
                             top: '10%',
                             show: true,
-                            text: 'Total Sale: ' + total_revenue.toFixed(2)+ "\n(completed)",
+                            text: 'Total Sale: $' + total_revenue.toFixed(2)+ "\n(completed)",
                             textStyle: {
                                 fontSize: 9,
                                 color: 'white',

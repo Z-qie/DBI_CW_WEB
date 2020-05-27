@@ -1,4 +1,13 @@
 $(function () {
+	  // update all order status and post status every time a customer/ rep/ manager logging in
+    $.ajax({
+        url: "../php/updateOrders.php",
+        method: 'POST',
+        error: function (msg) {alert(msg);}        
+    })                
+    
+
+
     // home page link
     $(".home_button_bg")
         .hover(() => {
@@ -210,8 +219,7 @@ $(".login_confirm").hide();
                 if (result.trim() == "Logging..") {
                     // set username cookie
                     $.cookie('username', login_input[0].value, {expire: 1});
-                    // set login cookie
-                    $.cookie('is_log', true, {expire: 1});
+                    
                     $(".login_confirm").slideUp();  
                     $(".login_confirm").html(result).slideDown();
                     $('.nav_option .logout span').html('LOGOUT');
@@ -221,8 +229,8 @@ $(".login_confirm").hide();
                         $(".login_confirm").slideUp();  }, 1500);
                     
                 } else {
-                    // set login cookie
-                    $.cookie('is_log', false, {expire: 1});
+                    // set username cookie
+                    $.cookie('username', null, {expire: 1});
                     // prompt confirm msg and refresh all data from input text if error.
                     $(".login_confirm").slideUp();  
                     $(".login_confirm").html(result).slideDown();
@@ -255,7 +263,6 @@ $(".login_confirm").hide();
         }, 200);
 
         if ($('.nav_option .logout span').html() == 'LOGOUT') { 
-            $.cookie('is_log', false);
             $.cookie('username', null);
             $('.nav_option .logout span').html('LOGIN'); 
             $(".welcome").html("<span>WELCOME</span><br /> Please Log In!");

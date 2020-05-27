@@ -49,7 +49,7 @@
                     "<span><br />&nbsp;&nbsp;&nbsp;SURGICAL MASK: </span>" . $row2['type2_quantity'] .
                     "<span><br />&nbsp;&nbsp;&nbsp;SURGICAL-N95-RESPIRATOR: </span>" . $row2['type3_quantity'] .
                 "</div><br />" .
-                "<div class='order_total'><span>TOTAL - $ </span>" . $total . "</div><br />" .
+                "<div class='order_total'><span>TOTAL - $ </span>" . number_format((float) $total, 2, '.', '') . "</div><br />" .
                 "<div class='order_status'><span>STATUS - </span>" . $row2['status'] . "</div><br />" .
                 "<div class='order_cancel'>CANCEL</div>" . 
             "</div>";

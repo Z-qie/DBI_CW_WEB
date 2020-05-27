@@ -4,9 +4,9 @@
     // this file connects databse of mysql
     // use PDO to do all operations on database.
     try{
-        $dsn = "mysql:dbname=DBICW;host=127.0.0.1;";
-        $name = "root";
-        $pwd = "Daniel+1997=";
+        $dsn = "mysql:dbname=zy21586;host=127.0.0.1;";
+        $name = "zy21586";
+        $pwd = "Daniel=1997=";
         $conn = new PDO($dsn,$name,$pwd);
         $conn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         // var_dump($conn);

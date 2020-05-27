@@ -1,5 +1,5 @@
 $(function () { 
-    $('.login').hide(0)
+   
     // update all order status and post status every time a customer/ rep/ manager logging in
     $.ajax({
         url: "../php/updateOrders.php",
