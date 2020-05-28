@@ -174,13 +174,13 @@ INSERT INTO Orders
 VALUES
 # customer: Sherry Miller, rep: Kira Morrow
 # keep in processing but cannot be cancelled by customer and rep
-(7, 14, 2020-05-10 00:00:00, processing, not sold, 200, 200, 200, 4.50, 5.30, 6.70),
+(7, 14, '2020-05-10 00:00:00', 'processing', 'not sold', 200, 200, 200, 4.50, 5.30, 6.70),
 # customer: Sherry Miller, rep: Kira Morrow
 # keep in processing but will be set as abnormal to be reviewed once the rep cmoplete the first order.
-(7, 14, 2020-05-11 00:01:00, processing, not sold, 100, 200, 300, 4.50, 5.30, 6.70),
+(7, 14, '2020-05-11 00:01:00', 'processing', 'not sold', 100, 200, 300, 4.50, 5.30, 6.70),
 # customer: Sherry Miller, rep: Kira Morrow
 # keep in processing but will be set as abnormal to be reviewed once the rep cmoplete the first order.
-(7, 14, 2020-05-12 00:02:00, processing, not sold, 300, 200, 100, 4.50, 5.30, 6.70);
+(7, 14, '2020-05-12 00:02:00', 'processing', 'not sold', 300, 200, 100, 4.50, 5.30, 6.70);
 
 
 

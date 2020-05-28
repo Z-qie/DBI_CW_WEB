@@ -163,6 +163,14 @@ $(() => {
                             },
                             error: function (msg) {alert(msg);}
                         })  
+                          // update all order status and post status every time a customer/ rep/ manager logging in
+                        $.ajax({
+                            url: "../php/updateOrders.php",
+                            method: 'POST',
+                            error: function (msg) {alert(msg);}        
+                        })                
+    
+                        
                     })
 
                 },
